@@ -12,6 +12,8 @@ vim.opt.shiftwidth=4
 
 vim.opt.clipboard = "unnamedplus"
 
+vim.opt.scrolloff=9999
+
 -- lazy
 require("config.lazy")
 
