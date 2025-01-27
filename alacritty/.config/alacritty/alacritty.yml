@@ -1,0 +1,151 @@
+# Configuration for Alacritty, the GPU enhanced terminal emulator.
+
+# Window
+window:
+  # Window dimensions (changes require restart)
+  # Units are physical pixels, scaled by DPI factor.
+  dimensions:
+    columns: 80
+    lines: 24
+
+  # Window position (changes require restart)
+  # Position is relative to monitor origin, units are physical pixels.
+  # x: 0
+  # y: 0
+
+  # Window padding (optional)
+  # Units are physical pixels.
+  padding:
+    x: 0
+    y: 0
+
+  # Spread extra padding evenly around the terminal content.
+  dynamic_padding: true
+
+  # Window decorations
+  #
+  # Values for `decorations`:
+  #     - full: Enable title bar.
+  #     - none: Disable title bar.
+  decorations: full
+
+  # Startup Mode (default is `Windowed`)
+  #
+  # Values for `startup_mode`:
+  #   - Windowed
+  #   - Maximized
+  #   - Fullscreen
+  startup_mode: Windowed
+
+  # Window title
+  title: terminal
+
+  # Window class (Linux only):
+  #   `instance` defines the window instance (default: alacritty)
+  #   `general` defines the general application class (default: Alacritty)
+  class:
+    instance: alacritty
+    general: Alacritty
+
+# Font configuration (changes require restart)
+font:
+  # The normal (roman) font face to use.
+  normal:
+    family: MesloLGS Nerd Font
+    style: Regular
+
+  # The bold font face
+  bold:
+    family: MesloLGS Nerd Font
+    style: Bold
+
+  # The italic font face
+  italic:
+    family: MesloLGS Nerd Font
+    style: Italic
+
+  # Point size of the font
+  size: 11.0
+
+  # Offset is the extra space around each character. offset.y can be thought of
+  # as modifying the linespacing, and offset.x as modifying the letter spacing.
+  offset:
+    x: 0
+    y: 0
+
+  # Glyph offset determines the locations of the glyphs within their cells with
+  # the default being at the bottom. Increase this for more space between the
+  # lines, decrease it for less.
+  glyph_offset:
+    x: 0
+    y: 0
+
+  # Thin stroke font rendering (macOS only)
+  # macos_thin_strokes: false
+
+# Colors (Catppuccin example)
+colors:
+  primary:
+    background: '0x1e1e2e'
+    foreground: '0xcdd6f4'
+
+  normal:
+    black:   '0x6e6c7e'
+    red:     '0xf38ba8'
+    green:   '0xa6e3a1'
+    yellow:  '0xf9e2af'
+    blue:    '0x89b4fa'
+    magenta: '0xf5c2e7'
+    cyan:    '0x94e2d5'
+    white:   '0xcdd6f4'
+
+  bright:
+    black:   '0x6e6c7e'
+    red:     '0xf38ba8'
+    green:   '0xa6e3a1'
+    yellow:  '0xf9e2af'
+    blue:    '0x89b4fa'
+    magenta: '0xf5c2e7'
+    cyan:    '0x94e2d5'
+    white:   '0xcdd6f4'
+
+# Cursor style
+cursor:
+  style:
+    shape: Block  # Values for `shape`: ▌ Block, Beam, Underline
+    blinking: Off # Values for `blinking`: Off, On
+
+# Shell
+shell:
+  program: /bin/bash
+  args:
+    - --login
+
+# Visual Bell
+visual_bell:
+  duration: 0
+  animation: EaseOutExpo
+  color: '#ffffff'
+  flash: true
+
+# Key Bindings
+key_bindings:
+  - { key:  V,        mods: Control|Shift, action: Paste                        }
+  - { key: C,        mods: Control|Shift, action: Copy                         }
+  - { key: H,        mods: Control,       action: Hide                         }
+  - { key: Q,        mods: Control,       action: Quit                         }
+
+# import:
+  # Uncomment the flavor you want below:
+  # - ~/.config/alacritty/catppuccin-latte.toml
+  # - ~/.config/alacritty/catppuccin-frappe.toml
+  # - ~/.config/alacritty/catppuccin-macchiato.toml
+  # - ~/.config/alacritty/catppuccin-mocha.toml
+
+# Other Alacritty configuration options can go here
+
+env:
+  TERM: xterm-256color
+
+window:
+  opacity: 0.8
